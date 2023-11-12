@@ -1,0 +1,45 @@
+------------------------------------------------------HTML---------------------------------------------------------------------------------------------------------------
+All img elements should have an alt attribute. (img element is self-closing element)
+The alt attribute's text is used for screen readers to improve accessibility and is displayed if the image fails to load.
+For example, <img src="cat.jpg" alt="A cat"> has an alt attribute with the text A cat.
+
+target="_blank" atribut otvara *link* u novoj stranici
+
+<a href="link"><img src="lokacija slike" alt="tekst slike"></a> pomocu ovo se moze otvoriti link kada kliknemo na sliku 
+
+<section> ? 
+<figure> ? za opis slike, <figcaption>
+
+<html lang="en"> to specify that the language of the page is English.
+
+Kako napraviti formu:
+Placeholder text is used to give people a hint about what kind of information to enter into an input. For example, <input type="text" placeholder="Email address">.
+To prevent a user from submitting your form when required information is missing, you need to add the required attribute to an input element. 
+The id attribute is used to identify specific HTML elements. Each id attribute's value must be unique from all other id values for the entire page.
+Notice that both radio buttons can be selected at the same time. To make it so selecting one radio button automatically deselects the other, both buttons must have a name 
+attribute with the same value.If you select the Indoor radio button and submit the form, the form data for the button is based on its name and value attributes.
+The fieldset element is used to group related inputs and labels together in a web form. fieldset elements are block-level elements, meaning that they appear on a new line.
+The legend element acts as a caption for the content in the fieldset element. It gives users context about what they should enter into that part of the form.
+In order to make a checkbox checked or radio button selected by default, you need to add the checked attribute to it. 
+
+Primer koda:
+
+<form action="https://freecatphotoapp.com/submit-cat-photo">
+          <fieldset>
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+          </fieldset>
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+          <button type="submit">Submit</button>
+        </form>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
