@@ -1,0 +1,119 @@
+------------------------------------------------------HTML-----------------------------------------------------------------------------------------------------------------
+All img elements should have an alt attribute. (img element is self-closing element)
+The alt attribute's text is used for screen readers to improve accessibility and is displayed if the image fails to load.
+For example, <img src="cat.jpg" alt="A cat"> has an alt attribute with the text A cat.
+
+target="_blank" atribut otvara *link* u novoj stranici
+
+<a href="link"><img src="lokacija slike" alt="tekst slike"></a> pomocu ovo se moze otvoriti link kada kliknemo na sliku 
+
+<section> ? 
+<figure> ? za opis slike, <figcaption>
+
+<html lang="en"> to specify that the language of the page is English.
+
+Kako napraviti formu:
+Placeholder text is used to give people a hint about what kind of information to enter into an input. For example, <input type="text" placeholder="Email address">.
+To prevent a user from submitting your form when required information is missing, you need to add the required attribute to an input element. 
+The id attribute is used to identify specific HTML elements. Each id attribute's value must be unique from all other id values for the entire page.
+Notice that both radio buttons can be selected at the same time. To make it so selecting one radio button automatically deselects the other, both buttons must have a name 
+attribute with the same value.If you select the Indoor radio button and submit the form, the form data for the button is based on its name and value attributes.
+The fieldset element is used to group related inputs and labels together in a web form. fieldset elements are block-level elements, meaning that they appear on a new line.
+The legend element acts as a caption for the content in the fieldset element. It gives users context about what they should enter into that part of the form.
+In order to make a checkbox checked or radio button selected by default, you need to add the checked attribute to it. 
+
+Primer koda:
+
+<form action="https://freecatphotoapp.com/submit-cat-photo">
+          <fieldset>
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+          </fieldset>
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+          <button type="submit">Submit</button>
+        </form>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------HTML AND CSS---------------------------------------------------------------------------------------------
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /> da bi izgledao na telefonu slicno kao i na desktopu (stavlja se unutar head strukture)
+
+The div element is used mainly for design layout purposes unlike the other content elements you have used so far. (npr ide body, div, main itd)
+The goal now is to make the div not take up the entire width of the page. The CSS width property is perfect for this.
+
+You can use the id selector to target a specific element with an id attribute. An id selector is defined by placing the hash symbol # directly in front of the 
+element's id value. For example, if an element has the id of cat then you would target that element like this:
+#cat {
+  width: 250px;
+}
+
+The default color of a link that has not yet been clicked on is typically blue. The default color of a link that has already been visited from a page is typically
+purple.To make the footer links the same color regardless if a link has been visited, use a type selector for the anchor element (a) and use the value black for
+the color property.
+You change properties of a link when the link has actually been visited by using a pseudo-selector that looks like a:visited { propertyName: propertyValue; }.
+Change the color of the footer Visit our website link to be grey when a user has visited the link.
+You change properties of a link when the mouse hovers over them by using a pseudo-selector that looks like a:hover { propertyName: propertyValue; }.
+Change the color of the footer Visit our website link to be brown when a user hovers over it.
+You change properties of a link when the link is actually being clicked by using a pseudo-selector that looks like a:active { propertyName: propertyValue; }.
+Change the color of the footer Visit our website link to be white when clicked on.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------COLOR CSS----------------------------------------------------------------------------------------------------
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> =============da stranica izgleda isto na svim uredjajima
+    <title>Colored Markers</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+The linear-gradient function is very flexible -- here is the basic syntax you'll use in this tutorial:
+
+linear-gradient(gradientDirection, color1, color2, ...);
+gradientDirection is the direction of the line used for the transition. color1 and color2 are color arguments, which are the colors that will be used in the 
+transition itself. These can be any type of color, including color keywords, hex, rgb, or hsl. You won't see gradient yet because the linear-gradient function needs at least two
+color arguments to work.
+background: linear-gradient(90deg, rgb(255, 0, 0), rgb(0,255,0));
+
+The box-shadow property lets you apply one or more shadows around an element. Here is basic syntax:
+
+box-shadow: offsetX offsetY color;
+Here's how the offsetX and offsetY values work:
+
+both offsetX and offsetY accept number values in px and other CSS units
+a positive offsetX value moves the shadow right and a negative value moves it left
+a positive offsetY value moves the shadow down and a negative value moves it up
+if you want a value of zero (0) for any or both offsetX and offsetY, you don't need to add a unit. Every browser understands that zero means no change.
+The height and width of the shadow is determined by the height and width of the element it's applied to. You can also use an optional spreadRadius value 
+to spread out the reach of the shadow. More on that later.
+
+Start by adding a simple shadow to the red marker.
+In the .red CSS rule, add the box-shadow property with the values 5px for offsetX, 5px for offsetY, and red for color. 
+++++++++++++++++++++
+Notice that the edges of the shadow are sharp. This is because there is an optional blurRadius value for the box-shadow property:
+
+box-shadow: offsetX offsetY blurRadius color;
+If a blurRadius value isn't included, it defaults to 0 and produces sharp edges. The higher the value of blurRadius, the greater the blurring effect is.
+++++++++++++++++++++
+But what if you wanted to expand the shadow out further? You can do that with the optional spreadRadius value:
+
+box-shadow: offsetX offsetY blurRadius spreadRadius color;
+Like blurRadius, spreadRadius defaults to 0 if it isn't included.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------Registration Form------------------------------------------------------------------------------------------
+Now, get rid of the horizontal scroll-bar, by setting the body default margin added by some browsers to 0. (margin: 0)
+
+<form action='https://register-demo.freecodecamp.org'></form>
+The method attribute specifies how to send form-data to the URL specified in the action attribute. The form-data can be sent
+via a GET request as URL parameters (with method="get") or via a POST request as data in the request body (with method="post").
+--->    <form action='https://register-demo.freecodecamp.org' method="post"></form>
+
+The border of the last fieldset element looks a little out of place. You can select the last element of a specific type using the last-of-type 
+CSS pseudo-class, like this:
+
+p:last-of-type { }
+That will select the last p element.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
