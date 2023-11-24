@@ -201,3 +201,8 @@ Before you get too far into your styling, you should make use of the sr-only cla
 the visual page, but still be announced by screen readers.
 The CSS you are about to write is a common set of properties used to ensure elements are completely hidden visually.
 The span[class~="sr-only"] selector will select any span element whose class includes sr-only. Create that selector, and give it a border property set to 0.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------
+The @keyframes at-rule is used to define the flow of a CSS animation. Within the @keyframes rule, you can create selectors for specific points in the animation sequence, 
+such as 0% or 25%, or use from and to to define the start and end of the sequence.
+@keyframes rules require a name to be assigned to them, which you use in other rules to reference. For example, the @keyframes freeCodeCamp { } rule would be named freeCodeCamp.
